@@ -2,7 +2,31 @@ import moment from "moment";
 import NodeCache from "node-cache";
 
 const users = new NodeCache();
+/*
+example (key, value)
+"4194567890", {
+  id: "4194567890",
+  name: "Jeff",
+  chats: [1]
+}
+*/
 const chats = new NodeCache();
+/*
+example (key, value)
+1, {
+  id: 1,
+  user1Id: "4194567890",
+  user2Id: "4191230987",
+  messages: [
+    {
+      sender: "4194567890",
+      receiver: "4191230987",
+      timestamp: 1580593314094,
+      message: "Hey there"
+    }
+  ]
+}
+*/
 
 function addChatToUser(id, chatId) {
   const user = users.get(id);
