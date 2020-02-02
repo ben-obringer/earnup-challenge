@@ -20,9 +20,12 @@
 - See remaining ones in `package.json`
 
 ## TODOs
+- Fix issue where server is restarting during some routes which is causing cache to be reset
+ - In hindsight, it would have been better to use a database since I'm not too familiar with Next.js
 - Improve design
  - Sidebar margins
  - Float chat form to bottom of page
 - Separate signup and login
 - Automatically display new messages instead of having to refresh page (GraphQL subscriptions would have worked here)
+- Allow username to be set for a an already created user who is logging in for the first time
 - Use a database instead of a server cache

@@ -28,7 +28,15 @@ example (key, value)
 }
 */
 
+function getCacheStats() {
+  console.log("users size", users.getStats().keys);
+  console.log("chats size", chats.getStats().keys);
+}
+
 function addChatToUser(id, chatId) {
+  console.log("addChatToUser");
+  getCacheStats();
+
   const user = users.get(id);
   user.chats.push(chatId);
   users.set(id, user);
@@ -37,6 +45,9 @@ function addChatToUser(id, chatId) {
 }
 
 export function getChats(userId, chatIds) {
+  console.log("getChats");
+  getCacheStats();
+
   return chatIds.map(id => {
     const chat = chats.get(id);
     chat.otherUser = users.get(
@@ -47,6 +58,9 @@ export function getChats(userId, chatIds) {
 }
 
 export function getUser(userId) {
+  console.log("getUser");
+  getCacheStats();
+
   if (!users.has(userId)) {
     return null;
   }
@@ -57,12 +71,18 @@ export function getUser(userId) {
 }
 
 export function createUser(phoneNumber, name) {
+  console.log("createUser");
+  getCacheStats();
+
   users.set(phoneNumber, { id: phoneNumber, name, chats: [] });
   console.log("createUser", users.get(phoneNumber));
   return users.get(phoneNumber);
 }
 
 export function createChat(sender, receiver, message) {
+  console.log("createChat");
+  getCacheStats();
+
   const key = chats.getStats().keys + 1;
   console.log("key", key);
   chats.set(key, {
@@ -85,6 +105,9 @@ export function createChat(sender, receiver, message) {
 }
 
 export function updateChat(id, sender, message) {
+  console.log("updateChat");
+  getCacheStats();
+
   console.log("updateChat", "id", id);
   const chat = chats.get(id);
   console.log("updateChat", "chat", chat);
