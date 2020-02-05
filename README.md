@@ -4,7 +4,8 @@
 - Node.js 10 or later
 
 ## Instructions to run
-1. Run `npm run dev`
+1. Run `npm install`
+2. Run `npm run dev`
 
 ## Instructions for using
 1. Go to [localhost:3000](http://localhost:3000/)
