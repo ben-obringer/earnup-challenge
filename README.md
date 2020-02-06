@@ -10,10 +10,10 @@
 ## Instructions for using
 1. Go to [localhost:3000](http://localhost:3000/)
 2. Log in with a name and phone number (if you're logging in a second time, you can enter whatever for the name)
+3. Open up a separate window to emulate "2" users
 
 - Start a chat by clicking button, entering the receiver's phone number, entering a message, and clicking Submit.
 - Respond to a chat by clicking a chat in the left sidebar, entering a message, and Clicking Submit.
-
 - Unfortunately, you'll need to refresh the page and log back in if you wan't to see any new message. These issues are bolded in the TODOs section.
 
 ## Open source projects used
