@@ -4,7 +4,8 @@
 - Node.js 10 or later
 
 ## Instructions to run
-1. Run `npm run dev`
+1. Run `npm install`
+2. Run `npm run dev`
 
 ## Instructions for using
 1. Go to [localhost:3000](http://localhost:3000/)
@@ -20,7 +21,7 @@
 - See remaining ones in `package.json`
 
 ## TODOs
-- Fix issue where server is restarting during some routes which is causing cache to be reset
+- **Fix issue where server is restarting during some routes which is causing cache to be reset**
  - In hindsight, it would have been better to use a database since I'm not too familiar with Next.js
 - Improve design
  - Sidebar margins
